@@ -18,6 +18,9 @@
 		A533F82724F0F66B005B98AC /* ItemsViewControllerIndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A533F82524F0F66B005B98AC /* ItemsViewControllerIndicatorCell.xib */; };
 		A533F82924F0F6BC005B98AC /* ItemsViewControllerCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F82824F0F6BC005B98AC /* ItemsViewControllerCellType.swift */; };
 		A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F82B24F16888005B98AC /* SafariViewController.swift */; };
+		A533F83124F17A11005B98AC /* QiitaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83024F17A11005B98AC /* QiitaItem.swift */; };
+		A533F83324F17A2D005B98AC /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83224F17A2D005B98AC /* QiitaUser.swift */; };
+		A533F83524F17AE3005B98AC /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83424F17AE3005B98AC /* QiitaItemTag.swift */; };
 		A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */; };
 		A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */; };
 		A5F5DD4F24F0B05C002F7F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		A533F82524F0F66B005B98AC /* ItemsViewControllerIndicatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerIndicatorCell.xib; sourceTree = "<group>"; };
 		A533F82824F0F6BC005B98AC /* ItemsViewControllerCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCellType.swift; sourceTree = "<group>"; };
 		A533F82B24F16888005B98AC /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		A533F83024F17A11005B98AC /* QiitaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItem.swift; sourceTree = "<group>"; };
+		A533F83224F17A2D005B98AC /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
+		A533F83424F17AE3005B98AC /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
 		A5F5DD4224F0B05B002F7F43 /* MentaMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentaMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +148,24 @@
 			path = Safari;
 			sourceTree = "<group>";
 		};
+		A533F82D24F17958005B98AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A533F82F24F179FC005B98AC /* Entity */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A533F82F24F179FC005B98AC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A533F83024F17A11005B98AC /* QiitaItem.swift */,
+				A533F83424F17AE3005B98AC /* QiitaItemTag.swift */,
+				A533F83224F17A2D005B98AC /* QiitaUser.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		A5F5DD3924F0B05B002F7F43 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +190,7 @@
 			children = (
 				A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */,
 				A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */,
+				A533F82D24F17958005B98AC /* Model */,
 				A533F7F624F0B5D4005B98AC /* ViewController */,
 				A533F81624F0E9E2005B98AC /* Common */,
 				A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */,
@@ -316,6 +341,9 @@
 				A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */,
 				A533F82924F0F6BC005B98AC /* ItemsViewControllerCellType.swift in Sources */,
 				A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */,
+				A533F83324F17A2D005B98AC /* QiitaUser.swift in Sources */,
+				A533F83124F17A11005B98AC /* QiitaItem.swift in Sources */,
+				A533F83524F17AE3005B98AC /* QiitaItemTag.swift in Sources */,
 				A533F82624F0F66B005B98AC /* ItemsViewControllerIndicatorCell.swift in Sources */,
 				A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */,
 				A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */,
