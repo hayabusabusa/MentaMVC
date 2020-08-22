@@ -16,15 +16,8 @@ final class ItemsViewController: UIViewController {
     
     // MARK: Properties
     
-    private var dataSource: [ItemsViewControllerCellType] = [
-        .item,
-        .item,
-        .item,
-        .item,
-        .item,
-        .item,
-        .indicator
-    ]
+    private let model: ItemsModel = ItemsModel()
+    private var dataSource: [ItemsViewControllerCellType] = []
     
     // MARK: Lifecycle
     
@@ -32,6 +25,7 @@ final class ItemsViewController: UIViewController {
         super.viewDidLoad()
         configureNavigation()
         configureTableView()
+        configureModel()
     }
 }
 
@@ -53,6 +47,27 @@ extension ItemsViewController {
         tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
         tableView.register(ItemsViewControllerIndicatorCell.nib, forCellReuseIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier)
     }
+    
+    private func configureModel() {
+        model.delegate = self
+        model.onViewDidLoad()
+    }
+}
+
+// MARK: - Model Delegate
+
+extension ItemsViewController: ItemsModelDelegate {
+    
+    func onSuccess(with items: [QiitaItem]) {
+        dataSource = items.map { .item(with: $0) }
+        tableView.reloadData()
+    }
+    
+    func onError(with error: Error) {
+        let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(ac, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TableView DataSource
@@ -67,17 +82,15 @@ extension ItemsViewController: UITableViewDataSource {
         let cellType = dataSource[indexPath.row]
         
         switch cellType {
-        case .item:
+        case .item(let item):
             let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerCell
-            
-            // TODO: Model オブジェクト作成後に修正する.
             cell.configureCell(
-                profileImageURL: "https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F202306%2Fprofile-images%2F1566547186?ixlib=rb-1.2.2&auto=compress%2Cformat&lossless=0&w=48&s=6949bc566d9b66c71fcddd7af98dda73",
-                title: "RxSwiftとRxCocoaを使ってストップウォッチを作る",
-                body: "去年からRxSwiftをしっかり使い始めて、ようやく慣れてきたので今回はRxSwiftとRxCocoaを使ってストップウォッチのようなタイマーを作ってみます。",
-                tags: ["iOS", "Swift", "RxSwift", "RxCocoa", "iOS", "Swift", "RxSwift", "RxCocoa"].reduce("") { $0 + "#\($1) " },
-                likesCount: 2,
-                commentsCount: 0)
+                profileImageURL: item.user.profileImageURL,
+                title: item.title,
+                body: item.body,
+                tags: item.tags.reduce("") { $0 + "#\($1.name) " },
+                likesCount: item.likesCount,
+                commentsCount: item.commentsCount)
             return cell
         case .indicator:
             let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerIndicatorCell
@@ -94,8 +107,15 @@ extension ItemsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let url = URL(string: "https://qiita.com/hayabusabusa/items/54838ab2d7862b5a04dd") else { return }
-        let vc = SafariViewController(url: url)
-        present(vc, animated: true, completion: nil)
+        let cellType = dataSource[indexPath.row]
+        
+        switch cellType {
+        case .item(let item):
+            guard let url = URL(string: item.url ?? "") else { return }
+            let vc = SafariViewController(url: url)
+            present(vc, animated: true, completion: nil)
+        default:
+            break
+        }
     }
 }

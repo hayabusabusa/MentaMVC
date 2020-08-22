@@ -22,6 +22,7 @@
 		A533F83324F17A2D005B98AC /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83224F17A2D005B98AC /* QiitaUser.swift */; };
 		A533F83524F17AE3005B98AC /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83424F17AE3005B98AC /* QiitaItemTag.swift */; };
 		A533F83824F17C0D005B98AC /* QiitaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83724F17C0D005B98AC /* QiitaAPIClient.swift */; };
+		A533F83A24F1811E005B98AC /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F83924F1811E005B98AC /* ItemsModel.swift */; };
 		A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */; };
 		A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */; };
 		A5F5DD4F24F0B05C002F7F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		A533F83224F17A2D005B98AC /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
 		A533F83424F17AE3005B98AC /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
 		A533F83724F17C0D005B98AC /* QiitaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIClient.swift; sourceTree = "<group>"; };
+		A533F83924F1811E005B98AC /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		A5F5DD4224F0B05B002F7F43 /* MentaMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentaMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				A533F83624F17BFC005B98AC /* Network */,
 				A533F82F24F179FC005B98AC /* Entity */,
+				A533F83924F1811E005B98AC /* ItemsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				A533F81924F0EA17005B98AC /* ImageView.swift in Sources */,
 				A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */,
 				A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */,
+				A533F83A24F1811E005B98AC /* ItemsModel.swift in Sources */,
 				A533F82924F0F6BC005B98AC /* ItemsViewControllerCellType.swift in Sources */,
 				A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */,
 				A533F83324F17A2D005B98AC /* QiitaUser.swift in Sources */,

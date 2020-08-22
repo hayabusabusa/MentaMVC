@@ -13,7 +13,7 @@ protocol QiitaAPIClientProtocol {
     func getItems(completion: @escaping (Result<[QiitaItem], Error>) -> Void)
 }
 
-final class QiitaAPIClient {
+final class QiitaAPIClient: QiitaAPIClientProtocol {
     
     // MARK: Singleton
     
