@@ -75,7 +75,7 @@ extension ItemsViewController: UITableViewDataSource {
                 profileImageURL: "https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F202306%2Fprofile-images%2F1566547186?ixlib=rb-1.2.2&auto=compress%2Cformat&lossless=0&w=48&s=6949bc566d9b66c71fcddd7af98dda73",
                 title: "RxSwiftとRxCocoaを使ってストップウォッチを作る",
                 body: "去年からRxSwiftをしっかり使い始めて、ようやく慣れてきたので今回はRxSwiftとRxCocoaを使ってストップウォッチのようなタイマーを作ってみます。",
-                tags: ["iOS", "Swift", "RxSwift", "RxCocoa"].reduce("") { $0 + "#\($1) " },
+                tags: ["iOS", "Swift", "RxSwift", "RxCocoa", "iOS", "Swift", "RxSwift", "RxCocoa"].reduce("") { $0 + "#\($1) " },
                 likesCount: 2,
                 commentsCount: 0)
             return cell
