@@ -9,18 +9,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="164" id="KGk-i7-Jjw" customClass="ItemsViewControllerCell" customModule="MentaMVC" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="ItemsViewControllerCell" customModule="MentaMVC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="293" height="164"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bii-2h-skB" userLabel="Vertical Stack View">
-                        <rect key="frame" x="16" y="12" width="269" height="140"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bii-2h-skB" userLabel="Vertical Stack View">
+                        <rect key="frame" x="16" y="12" width="284" height="121"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Klk-wQ-PuK" userLabel="Title Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="269" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="284" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qr-ys-OzN" customClass="ImageView" customModule="MentaMVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -39,8 +39,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【ReactNative / iOS】アプリ起動時に通知バッジを消す方法" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-fm-xwE">
-                                        <rect key="frame" x="48" y="0.0" width="221" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-fm-xwE">
+                                        <rect key="frame" x="48" y="0.0" width="236" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,17 +50,17 @@
                                     <constraint firstAttribute="height" constant="40" id="6Zk-wp-yzt"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VK6-63-pAS" userLabel="Bodies Stack View">
-                                <rect key="frame" x="0.0" y="48" width="269" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VK6-63-pAS" userLabel="Bodies Stack View">
+                                <rect key="frame" x="0.0" y="52" width="284" height="37"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CSZ-Ks-KQ2" userLabel="Body Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="269" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="284" height="14.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAt-YY-8fV" userLabel="Spacer">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="45.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="14.5"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ReactNativeアプリのiOSディストリビューションで、アプリを起動した際に通知バッジを消す方法です。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haY-g8-vZn">
-                                                <rect key="frame" x="48" y="0.0" width="221" height="45.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haY-g8-vZn">
+                                                <rect key="frame" x="48" y="0.0" width="236" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -68,13 +68,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n70-fG-ZcS" userLabel="Tags Stack View">
-                                        <rect key="frame" x="0.0" y="49.5" width="269" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="284" height="14.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJ8-sk-oOe" userLabel="Spacer">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="14.5"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#iOS #Push通知 #Notification #Ob #reactnative" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cun-gI-7Qx">
-                                                <rect key="frame" x="48" y="0.0" width="221" height="14.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cun-gI-7Qx">
+                                                <rect key="frame" x="48" y="0.0" width="236" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.14117647058823529" green="0.72941176470588232" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -84,16 +84,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ruN-lY-xys" userLabel="Reactions Stack View">
-                                <rect key="frame" x="0.0" y="120" width="269" height="20"/>
+                                <rect key="frame" x="0.0" y="101" width="284" height="20"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-M2-AG9" userLabel="Spacer">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="V6k-d3-gcO" userLabel="Contents Stack View">
-                                        <rect key="frame" x="44" y="0.0" width="225" height="20"/>
+                                        <rect key="frame" x="44" y="0.0" width="240" height="20"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-d3-UrV" userLabel="Like Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="110.5" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="20"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-Ga-dRK">
                                                         <rect key="frame" x="0.0" y="1.5" width="20" height="17.5"/>
@@ -102,8 +102,8 @@
                                                             <constraint firstAttribute="width" secondItem="nAV-Ga-dRK" secondAttribute="height" multiplier="1:1" id="TX7-48-6dm"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98g-hz-zNe">
-                                                        <rect key="frame" x="24" y="0.0" width="86.5" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes Count Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98g-hz-zNe">
+                                                        <rect key="frame" x="24" y="0.0" width="94" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.14117647059999999" green="0.72941176470000002" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -111,7 +111,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-10-fAW" userLabel="Comment Stack View">
-                                                <rect key="frame" x="114.5" y="0.0" width="110.5" height="20"/>
+                                                <rect key="frame" x="122" y="0.0" width="118" height="20"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yB2-nk-Skp">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="19.5"/>
@@ -120,8 +120,8 @@
                                                             <constraint firstAttribute="width" secondItem="yB2-nk-Skp" secondAttribute="height" multiplier="1:1" id="UbJ-JH-wI7"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAi-bp-Sev">
-                                                        <rect key="frame" x="24" y="0.0" width="86.5" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments Count Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAi-bp-Sev">
+                                                        <rect key="frame" x="24" y="0.0" width="94" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.14117647059999999" green="0.72941176470000002" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -142,16 +142,28 @@
                             <constraint firstItem="Dho-M2-AG9" firstAttribute="width" secondItem="3qr-ys-OzN" secondAttribute="width" id="vsU-Wx-lqf"/>
                         </constraints>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzN-pC-Wue" userLabel="Line View">
+                        <rect key="frame" x="0.0" y="144" width="320" height="1"/>
+                        <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="WJq-vk-vSL"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Bii-2h-skB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Gx8-XT-U13"/>
                     <constraint firstAttribute="bottom" secondItem="Bii-2h-skB" secondAttribute="bottom" constant="12" id="HaY-I7-doP"/>
+                    <constraint firstAttribute="trailing" secondItem="uzN-pC-Wue" secondAttribute="trailing" id="OGX-0f-vQR"/>
                     <constraint firstItem="Bii-2h-skB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="j9R-1A-QVE"/>
-                    <constraint firstAttribute="trailing" secondItem="Bii-2h-skB" secondAttribute="trailing" constant="8" id="n9n-w0-NaH"/>
+                    <constraint firstAttribute="trailing" secondItem="Bii-2h-skB" secondAttribute="trailing" constant="20" id="n9n-w0-NaH"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="uzN-pC-Wue" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="hEp-rs-uFs"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="leading" secondItem="uzN-pC-Wue" secondAttribute="leading" id="oJv-cT-OgD"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="37.681159420289859" y="68.973214285714278"/>
+            <point key="canvasLocation" x="37.681159420289859" y="61.941964285714285"/>
         </tableViewCell>
     </objects>
     <resources>

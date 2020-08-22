@@ -16,6 +16,16 @@ final class ItemsViewController: UIViewController {
     
     // MARK: Properties
     
+    private var dataSource: [ItemsViewControllerCellType] = [
+        .item,
+        .item,
+        .item,
+        .item,
+        .item,
+        .item,
+        .indicator
+    ]
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -37,10 +47,11 @@ extension ItemsViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorInset = .zero
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = ItemsViewControllerCell.estimatedRowHeight
         tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
+        tableView.register(ItemsViewControllerIndicatorCell.nib, forCellReuseIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier)
     }
 }
 
@@ -49,12 +60,21 @@ extension ItemsViewController {
 extension ItemsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerCell
-        return cell
+        let cellType = dataSource[indexPath.row]
+        
+        switch cellType {
+        case .item:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerCell
+            return cell
+        case .indicator:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerIndicatorCell
+            cell.configureCell()
+            return cell
+        }
     }
 }
 
