@@ -40,7 +40,7 @@ final class ItemsViewController: UIViewController {
 extension ItemsViewController {
     
     private func configureNavigation() {
-        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "img_mvc"))
     }
     
     private func configureTableView() {
