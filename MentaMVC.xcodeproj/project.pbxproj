@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
+		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
+		A533F81524F0E87A005B98AC /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A533F81324F0E87A005B98AC /* ItemsViewControllerCell.xib */; };
 		A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */; };
 		A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */; };
 		A5F5DD4F24F0B05C002F7F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
+		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
+		A533F81324F0E87A005B98AC /* ItemsViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerCell.xib; sourceTree = "<group>"; };
 		A5F5DD4224F0B05B002F7F43 /* MentaMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentaMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +75,18 @@
 			children = (
 				A533F7F824F0B613005B98AC /* ItemsViewController.swift */,
 				A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */,
+				A533F81124F0E85E005B98AC /* Cell */,
 			);
 			path = Items;
+			sourceTree = "<group>";
+		};
+		A533F81124F0E85E005B98AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */,
+				A533F81324F0E87A005B98AC /* ItemsViewControllerCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A5F5DD3924F0B05B002F7F43 = {
@@ -197,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F5DD5224F0B05C002F7F43 /* LaunchScreen.storyboard in Resources */,
+				A533F81524F0E87A005B98AC /* ItemsViewControllerCell.xib in Resources */,
 				A5F5DD4F24F0B05C002F7F43 /* Assets.xcassets in Resources */,
 				A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */,
 			);
@@ -217,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */,
+				A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */,
 				A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */,
 				A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */,
 			);
