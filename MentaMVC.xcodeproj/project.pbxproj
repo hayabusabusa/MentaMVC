@@ -12,6 +12,8 @@
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
 		A533F81524F0E87A005B98AC /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A533F81324F0E87A005B98AC /* ItemsViewControllerCell.xib */; };
 		A533F81924F0EA17005B98AC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81824F0EA17005B98AC /* ImageView.swift */; };
+		A533F81F24F0F59E005B98AC /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A533F81D24F0F59E005B98AC /* Kingfisher.framework */; };
+		A533F82124F0F59E005B98AC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A533F81E24F0F59E005B98AC /* Alamofire.framework */; };
 		A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */; };
 		A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */; };
 		A5F5DD4F24F0B05C002F7F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
 		A533F81324F0E87A005B98AC /* ItemsViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerCell.xib; sourceTree = "<group>"; };
 		A533F81824F0EA17005B98AC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		A533F81D24F0F59E005B98AC /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		A533F81E24F0F59E005B98AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A5F5DD4224F0B05B002F7F43 /* MentaMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentaMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A533F81F24F0F59E005B98AC /* Kingfisher.framework in Frameworks */,
+				A533F82124F0F59E005B98AC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +113,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A533F81C24F0F59E005B98AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A533F81E24F0F59E005B98AC /* Alamofire.framework */,
+				A533F81D24F0F59E005B98AC /* Kingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A5F5DD3924F0B05B002F7F43 = {
 			isa = PBXGroup;
 			children = (
 				A5F5DD4424F0B05B002F7F43 /* MentaMVC */,
 				A5F5DD5B24F0B05C002F7F43 /* MentaMVCTests */,
 				A5F5DD4324F0B05B002F7F43 /* Products */,
+				A533F81C24F0F59E005B98AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +174,7 @@
 				A5F5DD3E24F0B05B002F7F43 /* Sources */,
 				A5F5DD3F24F0B05B002F7F43 /* Frameworks */,
 				A5F5DD4024F0B05B002F7F43 /* Resources */,
+				A533F81B24F0F580005B98AC /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -244,6 +261,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A533F81B24F0F580005B98AC /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5F5DD3E24F0B05B002F7F43 /* Sources */ = {
@@ -407,6 +447,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MentaMVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,6 +468,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MentaMVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
