@@ -23,6 +23,12 @@ final class ItemsModel {
     
     private let apiClient: QiitaAPIClientProtocol
     
+    // MARK: Properties
+    
+    private var currentPage: Int = 1
+    private var currentItems: [QiitaItem] = []
+    private var isLoading: Bool = false
+    
     // MARK: Initializer
     
     init(apiClient: QiitaAPIClientProtocol = QiitaAPIClient.shared) {
@@ -32,9 +38,10 @@ final class ItemsModel {
     // MARK: View Trigger
     
     func onViewDidLoad() {
-        apiClient.getItems { [weak self] result in
+        apiClient.getItems(page: currentPage) { [weak self] result in
             switch result {
             case .success(let items):
+                self?.currentItems = items
                 self?.delegate?.onSuccess(with: items)
             case .failure(let error):
                 self?.delegate?.onError(with: error)
@@ -43,6 +50,21 @@ final class ItemsModel {
     }
     
     func onReachBottom() {
-        print(#function)
+        guard !isLoading else { return }
+        
+        let nextPage = currentPage + 1
+        isLoading = true
+        
+        apiClient.getItems(page: nextPage) { [weak self] result in
+            switch result {
+            case .success(let items):
+                self?.currentItems += items
+                self?.currentPage = nextPage
+                self?.isLoading = false
+                self?.delegate?.onSuccess(with: self?.currentItems ?? [])
+            case .failure(let error):
+                self?.delegate?.onError(with: error)
+            }
+        }
     }
 }

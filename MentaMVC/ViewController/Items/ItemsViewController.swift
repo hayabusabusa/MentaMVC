@@ -59,7 +59,7 @@ extension ItemsViewController {
 extension ItemsViewController: ItemsModelDelegate {
     
     func onSuccess(with items: [QiitaItem]) {
-        dataSource = items.map { .item(with: $0) }
+        dataSource = items.map { .item(with: $0) } + [.indicator]
         tableView.reloadData()
     }
     
