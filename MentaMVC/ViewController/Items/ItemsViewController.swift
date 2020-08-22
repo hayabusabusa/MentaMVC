@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ItemsViewController.swift
 //  MentaMVC
 //
 //  Created by Shunya Yamada on 2020/08/22.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ItemsViewController: UIViewController {
+    
+    // MARK: IBOutlet
+    
+    // MARK: Properties
+    
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
