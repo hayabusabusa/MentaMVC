@@ -15,6 +15,7 @@ class ItemsViewControllerCell: UITableViewCell {
     // MARK: Properties
     
     static let reuseIdentifier: String = "ItemsViewControllerCell"
+    static let estimatedRowHeight: CGFloat = 164
     static let nib: UINib = UINib(nibName: "ItemsViewControllerCell", bundle: nil)
     
     // MARK: Lifecycle

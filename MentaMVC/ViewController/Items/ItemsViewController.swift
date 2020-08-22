@@ -37,6 +37,9 @@ extension ItemsViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorInset = .zero
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = ItemsViewControllerCell.estimatedRowHeight
         tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
     }
 }
