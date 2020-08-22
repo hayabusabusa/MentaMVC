@@ -93,5 +93,9 @@ extension ItemsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let url = URL(string: "https://qiita.com/hayabusabusa/items/54838ab2d7862b5a04dd") else { return }
+        let vc = SafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
     }
 }
