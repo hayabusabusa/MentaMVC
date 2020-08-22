@@ -41,4 +41,8 @@ final class ItemsModel {
             }
         }
     }
+    
+    func onReachBottom() {
+        print(#function)
+    }
 }

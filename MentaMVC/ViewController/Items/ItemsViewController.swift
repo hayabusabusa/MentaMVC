@@ -104,6 +104,12 @@ extension ItemsViewController: UITableViewDataSource {
 
 extension ItemsViewController: UITableViewDelegate {
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y + tableView.frame.size.height > tableView.contentSize.height - 24 && tableView.isDragging {
+            model.onReachBottom()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
