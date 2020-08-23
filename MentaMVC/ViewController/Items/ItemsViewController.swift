@@ -8,13 +8,15 @@
 
 import UIKit
 
-final class ItemsViewController: UIViewController {
+final class ItemsViewController: UIViewController, StateViewable {
     
     // MARK: IBOutlet
     
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: Properties
+    
+    let stateView: StateView = StateView(frame: .zero, errorTitle: "エラーが発生しました.")
     
     private let model: ItemsModel = ItemsModel()
     private var dataSource: [ItemsViewControllerCellType] = []
@@ -25,6 +27,7 @@ final class ItemsViewController: UIViewController {
         super.viewDidLoad()
         configureNavigation()
         configureTableView()
+        configureStateView()
         configureModel()
     }
 }
@@ -38,6 +41,8 @@ extension ItemsViewController {
     }
     
     private func configureTableView() {
+        // NOTE: ロードが完了するまで TableView を隠す.
+        tableView.alpha = 0
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -48,9 +53,25 @@ extension ItemsViewController {
         tableView.register(ItemsViewControllerIndicatorCell.nib, forCellReuseIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier)
     }
     
+    private func configureStateView() {
+        setupStateView()
+        stateView.setState(of: .loading)
+    }
+    
     private func configureModel() {
         model.delegate = self
         model.onViewDidLoad()
+    }
+}
+
+// MARK: - Animation
+
+extension ItemsViewController {
+    
+    private func animateTableView(isHidden: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            self.tableView.alpha = isHidden ? 0 : 1
+        }
     }
 }
 
@@ -60,6 +81,8 @@ extension ItemsViewController: ItemsModelDelegate {
     
     func onSuccess(with items: [QiitaItem]) {
         dataSource = items.map { .item(with: $0) } + [.indicator]
+        stateView.setState(of: .none)
+        animateTableView(isHidden: false)
         tableView.reloadData()
     }
     
@@ -67,6 +90,7 @@ extension ItemsViewController: ItemsModelDelegate {
         let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(ac, animated: true, completion: nil)
+        stateView.setState(of: .error)
     }
 }
 
