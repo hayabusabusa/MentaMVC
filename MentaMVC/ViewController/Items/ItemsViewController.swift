@@ -79,8 +79,8 @@ extension ItemsViewController {
 
 extension ItemsViewController: ItemsModelDelegate {
     
-    func onSuccess(with items: [QiitaItem]) {
-        dataSource = items.map { .item(with: $0) } + [.indicator]
+    func onSuccess(with items: [QiitaItem], isReachLastPage: Bool) {
+        dataSource = items.map { .item(with: $0) } + (isReachLastPage ? [] : [.indicator])
         stateView.setState(of: .none)
         animateTableView(isHidden: false)
         tableView.reloadData()

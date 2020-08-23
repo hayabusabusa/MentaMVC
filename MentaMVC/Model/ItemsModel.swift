@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ItemsModelDelegate: AnyObject {
-    func onSuccess(with items: [QiitaItem])
+    func onSuccess(with dataSource: [QiitaItem], isReachLastPage: Bool)
     func onError(with error: Error)
 }
 
@@ -43,7 +43,7 @@ final class ItemsModel {
             switch result {
             case .success(let response):
                 self?.currentItems = response.items
-                self?.delegate?.onSuccess(with: response.items)
+                self?.delegate?.onSuccess(with: response.items, isReachLastPage: false)
             case .failure(let error):
                 self?.delegate?.onError(with: error)
             }
@@ -63,7 +63,7 @@ final class ItemsModel {
                 self?.currentPage = nextPage
                 self?.isLoading = false
                 self?.isReachLastPage = nextPage >= response.totalCount
-                self?.delegate?.onSuccess(with: self?.currentItems ?? [])
+                self?.delegate?.onSuccess(with: self?.currentItems ?? [], isReachLastPage: nextPage >= response.totalCount)
             case .failure(let error):
                 self?.delegate?.onError(with: error)
             }
