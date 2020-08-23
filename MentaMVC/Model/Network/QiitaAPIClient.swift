@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol QiitaAPIClientProtocol {
-    func getItems(page: Int, completion: @escaping (Result<[QiitaItem], Error>) -> Void)
+    func getItems(page: Int, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void)
 }
 
 final class QiitaAPIClient: QiitaAPIClientProtocol {
@@ -29,15 +29,18 @@ final class QiitaAPIClient: QiitaAPIClientProtocol {
     
     // MARK: Requests
     
-    func getItems(page: Int, completion: @escaping (Result<[QiitaItem], Error>) -> Void) {
+    func getItems(page: Int, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
         let url = baseURL + "/items?page=\(page)"
         AF.request(url, method: .get, encoding: JSONEncoding.default).responseJSON { response in
             switch response.result {
             case .success:
                 do {
-                    guard let data = response.data else { return }
+                    guard let data = response.data,
+                        let totalCountString = response.response?.headers["total-count"],
+                        let totalCount = Int(totalCountString) else { return }
+                    
                     let items = try JSONDecoder().decode([QiitaItem].self, from: data)
-                    completion(.success(items))
+                    completion(.success(QiitaItemsResponse(items: items, totalCount: totalCount)))
                 } catch {
                     completion(.failure(error))
                 }

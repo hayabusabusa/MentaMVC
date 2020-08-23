@@ -28,6 +28,7 @@ final class ItemsModel {
     private var currentPage: Int = 1
     private var currentItems: [QiitaItem] = []
     private var isLoading: Bool = false
+    private var isReachLastPage: Bool = false
     
     // MARK: Initializer
     
@@ -40,9 +41,9 @@ final class ItemsModel {
     func onViewDidLoad() {
         apiClient.getItems(page: currentPage) { [weak self] result in
             switch result {
-            case .success(let items):
-                self?.currentItems = items
-                self?.delegate?.onSuccess(with: items)
+            case .success(let response):
+                self?.currentItems = response.items
+                self?.delegate?.onSuccess(with: response.items)
             case .failure(let error):
                 self?.delegate?.onError(with: error)
             }
@@ -50,17 +51,18 @@ final class ItemsModel {
     }
     
     func onReachBottom() {
-        guard !isLoading else { return }
+        guard !isLoading && !isReachLastPage else { return }
         
         let nextPage = currentPage + 1
         isLoading = true
         
         apiClient.getItems(page: nextPage) { [weak self] result in
             switch result {
-            case .success(let items):
-                self?.currentItems += items
+            case .success(let response):
+                self?.currentItems += response.items
                 self?.currentPage = nextPage
                 self?.isLoading = false
+                self?.isReachLastPage = nextPage >= response.totalCount
                 self?.delegate?.onSuccess(with: self?.currentItems ?? [])
             case .failure(let error):
                 self?.delegate?.onError(with: error)
