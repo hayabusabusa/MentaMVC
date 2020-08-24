@@ -99,6 +99,10 @@ Qiita の API は[ページネーション](https://qiita.com/api/v2/docs#%E3%83
 それを利用して記事一覧のテーブルを一番下までスクロールさせると次のページの記事を追加で読み込み、  
 表示する機能を実装してください。
 
+| ページネーションの動作 |
+| :----------------: |
+| ![Aug-24-2020 15-29-23](https://user-images.githubusercontent.com/31949692/91012882-cd3f2c00-e621-11ea-9a71-3d95183a9ded.gif) |
+
 <details>
 <summary>実装のヒント</summary>
 
