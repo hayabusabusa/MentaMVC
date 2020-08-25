@@ -54,6 +54,51 @@ do {
 **APIClient** のようなクラスを作成して、それを **Model** で実行する構成にすると再利用性が上がり、  
 より良い構成になると思います。( [参考](https://qiita.com/ENDoDo/items/ab5c5edd5e07d6936743) )
 
+なお、通信処理を行うのは**画面初回起動時**になるため `viewDidLoad()` で実行します。
+
+### Model の作成
+**Model** は取得したデータを保持する必要があったりするためクラスで作成します。  
+また、ViewController から View 関連のアクションを受け取るため ViewController が Model を保持する形で実装します。
+
+```Swift
+final class SampleModel {
+    private var isViewLoaded: Bool = false
+
+    func onViewDidLoad() {
+        // ViewDidLoad でする処理
+        isViewLoaded = true
+    }
+}
+
+// ViewController
+final class SampleViewController: UIViewController {
+    
+    // ViewController が Model を保持
+    private let model = SampleModel()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Model に View に関する処理が実行されたことを関数を通じて通知
+        model.onViewDidLoad()
+    }
+}
+```
+
+MVC における **Model** の役割は
+
+- ビジネスロジック
+- データの変更を **Controller** (今回の場合は ViewController) に通知
+- **Controller** から **View** のアクションを受け取り、処理を実行(今回の場合は ViewController から直接受け取る)
+
+となっています。
+
+これに「`viewDidLoad` で API へリクエストを送り、データを表示する」という処理を当てはめると、  
+**Model** は以下の順に処理をしていきます。
+
+1. ViewController から `viewDidLoad` が実行されたことを受け取る
+1. API との通信を実行
+1. API から取得した処理を ViewController へ通知する
+
 ### Model と ViewController 間のやりとりを実装
 **Model** で得たデータを **ViewController** へ通知する処理を実装します。  
 これには **Delegate** パターンを利用します。  
@@ -71,8 +116,6 @@ final class SampleModel {
 
 // ViewController
 final class SampleViewController: UIViewController {
-
-    // Model を保持
     private let model = SampleModel()
 
     override func viewDidLoad() {
