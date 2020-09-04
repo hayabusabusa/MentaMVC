@@ -8,24 +8,16 @@
 
 import Foundation
 
-struct User: Decodable {
-  var profileImageURL: String
-  
-  enum CodingKeys: String, CodingKey {
-    case profileImageURL = "profile_image_url"
-  }
-}
-
 struct QiitaItems: Decodable {
-  var user: User
-  var title: String
-  var body: String
-  var tags: String
-  var likesCount: Int
-  var commentsCount: Int
-  var url: String
+  let user: User
+  let title: String
+  let body: String
+  let tags: String
+  let likesCount: Int
+  let commentsCount: Int
+  let url: String
   
-  enum CodingKeys: String, CodingKey {
+  private enum CodingKeys: String, CodingKey {
     case user
     case title
     case body
