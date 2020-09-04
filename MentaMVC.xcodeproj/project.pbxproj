@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71B535192502069C007F02EF /* QiitaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B535182502069C007F02EF /* QiitaItem.swift */; };
+		71B5351B250206B2007F02EF /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351A250206B2007F02EF /* QiitaItemTag.swift */; };
+		71B5351D250206CE007F02EF /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351C250206CE007F02EF /* QiitaUser.swift */; };
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71B535182502069C007F02EF /* QiitaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItem.swift; sourceTree = "<group>"; };
+		71B5351A250206B2007F02EF /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
+		71B5351C250206CE007F02EF /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
 		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
@@ -80,6 +86,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71B535152502043A007F02EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71B5351625020444007F02EF /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71B5351625020444007F02EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				71B5351725020691007F02EF /* Response */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		71B5351725020691007F02EF /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				71B535182502069C007F02EF /* QiitaItem.swift */,
+				71B5351A250206B2007F02EF /* QiitaItemTag.swift */,
+				71B5351C250206CE007F02EF /* QiitaUser.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		A533F7F624F0B5D4005B98AC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +201,7 @@
 				A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */,
 				A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */,
 				A55D6BF924F24AC4000B2ED4 /* Secrets.swift */,
+				71B535152502043A007F02EF /* Model */,
 				A533F7F624F0B5D4005B98AC /* View */,
 				A533F81624F0E9E2005B98AC /* Common */,
 				A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */,
@@ -315,11 +348,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A533F81924F0EA17005B98AC /* ImageView.swift in Sources */,
+				71B535192502069C007F02EF /* QiitaItem.swift in Sources */,
 				A55D6BFA24F24AC4000B2ED4 /* Secrets.swift in Sources */,
 				A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */,
 				A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */,
+				71B5351D250206CE007F02EF /* QiitaUser.swift in Sources */,
 				A533F82924F0F6BC005B98AC /* ItemsViewControllerCellType.swift in Sources */,
 				A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */,
+				71B5351B250206B2007F02EF /* QiitaItemTag.swift in Sources */,
 				A533F82624F0F66B005B98AC /* ItemsViewControllerIndicatorCell.swift in Sources */,
 				A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */,
 				A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */,
