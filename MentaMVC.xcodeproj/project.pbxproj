@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7401509E25022F3000193BDB /* QiitaItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401509D25022F3000193BDB /* QiitaItems.swift */; };
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7401509D25022F3000193BDB /* QiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItems.swift; sourceTree = "<group>"; };
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
 		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		A533F7F724F0B5DF005B98AC /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				7401509D25022F3000193BDB /* QiitaItems.swift */,
 				A533F82824F0F6BC005B98AC /* ItemsViewControllerCellType.swift */,
 				A533F7F824F0B613005B98AC /* ItemsViewController.swift */,
 				A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */,
@@ -317,6 +320,7 @@
 				A533F81924F0EA17005B98AC /* ImageView.swift in Sources */,
 				A55D6BFA24F24AC4000B2ED4 /* Secrets.swift in Sources */,
 				A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */,
+				7401509E25022F3000193BDB /* QiitaItems.swift in Sources */,
 				A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */,
 				A533F82924F0F6BC005B98AC /* ItemsViewControllerCellType.swift in Sources */,
 				A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */,
