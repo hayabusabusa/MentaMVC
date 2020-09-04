@@ -9,7 +9,7 @@
 import Foundation
 
 struct QiitaItems: Decodable {
-  let user: User
+  let user: QiitaUser
   let title: String
   let body: String
   let tags: String
