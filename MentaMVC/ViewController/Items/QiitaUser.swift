@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: Decodable {
+struct QiitaUser: Decodable {
   let profileImageURL: String
   
   private enum CodingKeys: String, CodingKey {
