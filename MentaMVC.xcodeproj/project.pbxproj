@@ -80,13 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A533F7F624F0B5D4005B98AC /* ViewController */ = {
+		A533F7F624F0B5D4005B98AC /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A533F7F724F0B5DF005B98AC /* Items */,
 				A533F82A24F1686A005B98AC /* Safari */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		A533F7F724F0B5DF005B98AC /* Items */ = {
@@ -169,7 +169,7 @@
 				A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */,
 				A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */,
 				A55D6BF924F24AC4000B2ED4 /* Secrets.swift */,
-				A533F7F624F0B5D4005B98AC /* ViewController */,
+				A533F7F624F0B5D4005B98AC /* View */,
 				A533F81624F0E9E2005B98AC /* Common */,
 				A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */,
 				A5F5DD5024F0B05C002F7F43 /* LaunchScreen.storyboard */,
