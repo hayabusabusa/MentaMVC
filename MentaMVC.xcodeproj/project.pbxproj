@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7401509E25022F3000193BDB /* QiitaItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401509D25022F3000193BDB /* QiitaItems.swift */; };
 		740150A0250233F500193BDB /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401509F250233F500193BDB /* QiitaUser.swift */; };
+		743661CB2502430600F62EA9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743661CA2502430600F62EA9 /* Secrets.swift */; };
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		7401509D25022F3000193BDB /* QiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItems.swift; sourceTree = "<group>"; };
 		7401509F250233F500193BDB /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
+		743661CA2502430600F62EA9 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
 		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */,
 				A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */,
+				743661CA2502430600F62EA9 /* Secrets.swift */,
 				A533F7F624F0B5D4005B98AC /* ViewController */,
 				A533F81624F0E9E2005B98AC /* Common */,
 				A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */,
@@ -327,6 +330,7 @@
 				A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */,
 				740150A0250233F500193BDB /* QiitaUser.swift in Sources */,
 				A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */,
+				743661CB2502430600F62EA9 /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
