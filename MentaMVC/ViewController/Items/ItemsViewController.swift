@@ -13,6 +13,7 @@ final class ItemsViewController: UIViewController {
     // MARK: IBOutlet
     
     @IBOutlet private weak var tableView: UITableView!
+    private let qiitaItems = GetQiita()
     
     // MARK: Properties
     
@@ -32,6 +33,7 @@ final class ItemsViewController: UIViewController {
         super.viewDidLoad()
         configureNavigation()
         configureTableView()
+        qiitaItems.onViewDidLoad()
     }
 }
 
