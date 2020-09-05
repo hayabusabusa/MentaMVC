@@ -9,14 +9,12 @@
 import Foundation
 import Alamofire
 
-final class GetQiita {
-    private var isViewLoaded: Bool = false
-
+final class ItemsModel {
     func onViewDidLoad() {
         // ViewDidLoad でする処理
-        let text = "https://qiita.com/api/v2/items?page=1&per_page=20"
-        let url = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { response in
+        let urlString = "https://qiita.com/api/v2/items?page=1&per_page=20"
+        let url = URL(string: urlString)
+        AF.request(url!, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { response in
             switch response.result {
                 case .success:
                     // JSON からの変換
@@ -35,7 +33,6 @@ final class GetQiita {
                 break
             }
         }
-        isViewLoaded = true
     }
 }
 

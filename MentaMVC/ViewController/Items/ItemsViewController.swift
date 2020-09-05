@@ -13,7 +13,7 @@ final class ItemsViewController: UIViewController {
     // MARK: IBOutlet
     
     @IBOutlet private weak var tableView: UITableView!
-    private let qiitaItems = GetQiita()
+    private let qiitaItems = ItemsModel()
     
     // MARK: Properties
     
