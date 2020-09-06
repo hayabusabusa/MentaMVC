@@ -34,6 +34,18 @@ final class ItemsViewController: UIViewController {
         configureNavigation()
         configureTableView()
         itemsModel.onViewDidLoad()
+        itemsModel.delegate = self
+    }
+}
+
+extension ItemsViewController: ItemsModelDelegate {
+    func onViewDidLoad(with someData: Data) {
+        //modelで得たデータの処理
+        //すでにデコードされた記事データを取得してある → tableViewに映せばいいのでは？ → cellForlowAtに取得したデータを渡す → すでにcellForlowAtに記述されているデータどうするのか？
+      let a = Data()
+      print("=====") //そもそも呼ばれていない・・・
+      print(a)
+      print("=====")
     }
 }
 

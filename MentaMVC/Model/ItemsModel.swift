@@ -9,7 +9,14 @@
 import Foundation
 import Alamofire
 
+protocol ItemsModelDelegate: AnyObject {
+    func onViewDidLoad(with someData: Data)
+}
+
 final class ItemsModel {
+    
+    weak var delegate: ItemsModelDelegate?
+    
     func onViewDidLoad() {
         // ViewDidLoad でする処理
         let urlString = "https://qiita.com/api/v2/items?page=1&per_page=20"
