@@ -10,7 +10,7 @@
 		7401509E25022F3000193BDB /* QiitaItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401509D25022F3000193BDB /* QiitaItems.swift */; };
 		740150A0250233F500193BDB /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7401509F250233F500193BDB /* QiitaUser.swift */; };
 		743661CB2502430600F62EA9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743661CA2502430600F62EA9 /* Secrets.swift */; };
-		743661F02503637200F62EA9 /* GetQiita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743661EF2503637200F62EA9 /* GetQiita.swift */; };
+		743661F02503637200F62EA9 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743661EF2503637200F62EA9 /* ItemsModel.swift */; };
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
@@ -43,7 +43,7 @@
 		7401509D25022F3000193BDB /* QiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItems.swift; sourceTree = "<group>"; };
 		7401509F250233F500193BDB /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
 		743661CA2502430600F62EA9 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		743661EF2503637200F62EA9 /* GetQiita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQiita.swift; sourceTree = "<group>"; };
+		743661EF2503637200F62EA9 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
 		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		743661CC250303C800F62EA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				743661EF2503637200F62EA9 /* GetQiita.swift */,
+				743661EF2503637200F62EA9 /* ItemsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,7 +336,7 @@
 				7401509E25022F3000193BDB /* QiitaItems.swift in Sources */,
 				A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */,
 				A533F82924F0F6BC005B98AC /* ItemsViewControllerCellType.swift in Sources */,
-				743661F02503637200F62EA9 /* GetQiita.swift in Sources */,
+				743661F02503637200F62EA9 /* ItemsModel.swift in Sources */,
 				A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */,
 				A533F82624F0F66B005B98AC /* ItemsViewControllerIndicatorCell.swift in Sources */,
 				A5F5DD4624F0B05B002F7F43 /* AppDelegate.swift in Sources */,
