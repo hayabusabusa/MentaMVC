@@ -44,7 +44,7 @@
 		7401509D25022F3000193BDB /* QiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItems.swift; sourceTree = "<group>"; };
 		7401509F250233F500193BDB /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
 		743661CA2502430600F62EA9 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		743661EF2503637200F62EA9 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
+		743661EF2503637200F62EA9 /* ItemsModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; tabWidth = 4; };
 		743661F12504A19700F62EA9 /* QiitaTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaTags.swift; sourceTree = "<group>"; };
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
