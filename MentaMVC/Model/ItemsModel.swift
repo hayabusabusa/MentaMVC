@@ -27,10 +27,8 @@ final class ItemsModel {
                         print("---ここでエラー---")
                         print(error)
                     }
-                break
                 case .failure:
                   print("failure")
-                break
             }
         }
     }
