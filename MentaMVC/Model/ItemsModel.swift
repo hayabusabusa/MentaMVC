@@ -24,7 +24,6 @@ final class ItemsModel {
                         print(qiitaItems)
                     } catch {
                         // デコードのエラー
-                        print("---ここでエラー---")
                         print(error)
                     }
                 case .failure:
