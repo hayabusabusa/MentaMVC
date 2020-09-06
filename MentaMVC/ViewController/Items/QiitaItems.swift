@@ -12,7 +12,7 @@ struct QiitaItems: Decodable {
   let user: QiitaUser
   let title: String
   let body: String
-  let tags: String
+  let tags: [QiitaTags]
   let likesCount: Int
   let commentsCount: Int
   let url: String
