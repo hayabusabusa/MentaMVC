@@ -19,8 +19,8 @@ final class ItemsModel {
                 case .success:
                     // JSON からの変換
                     do {
-                        let data = response.data
-                        let qiitaItems = try JSONDecoder().decode(QiitaItems.self, from: data!)
+                        guard let data = response.data else { return }
+                        let qiitaItems = try JSONDecoder().decode([QiitaItems].self, from: data)
                         print(qiitaItems)
                     } catch {
                         // デコードのエラー
