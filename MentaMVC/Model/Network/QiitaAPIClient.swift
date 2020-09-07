@@ -31,7 +31,8 @@ final class QiitaAPIClient: QiitaAPIClientProtocol {
     
     func getItems(page: Int, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
         let url = baseURL + "/items?page=\(page)"
-        AF.request(url, method: .get, encoding: JSONEncoding.default).responseJSON { response in
+        let headers = HTTPHeaders([HTTPHeader(name: "Authorization", value: "Bearer " + qiitaAccessToken)])
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch response.result {
             case .success:
                 do {
