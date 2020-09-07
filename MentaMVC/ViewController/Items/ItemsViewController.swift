@@ -31,9 +31,9 @@ final class ItemsViewController: UIViewController {
 }
 
 extension ItemsViewController: ItemsModelDelegate {
-    func getQiitaData(with: [QiitaItems]) {
+    func getQiitaData(qiitaItems: [QiitaItems]) {
         //modelから[QiitaItems]型のデータを受け取った
-        print(with)
+        print(qiitaItems)
     }
 }
 

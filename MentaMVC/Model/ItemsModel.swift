@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol ItemsModelDelegate: AnyObject {
-    func getQiitaData(with: [QiitaItems])
+    func getQiitaData(qiitaItems: [QiitaItems])
 }
 
 final class ItemsModel {
@@ -28,8 +28,8 @@ final class ItemsModel {
                     do {
                         guard let data = response.data else { return }
                         let qiitaItems = try JSONDecoder().decode([QiitaItems].self, from: data)
-//                        print(qiitaItems)
-                        self.delegate?.getQiitaData(with: qiitaItems)
+                        print(qiitaItems)
+                        self.delegate?.getQiitaData(qiitaItems: qiitaItems)
                     } catch {
                         // デコードのエラー
                         print(error)
