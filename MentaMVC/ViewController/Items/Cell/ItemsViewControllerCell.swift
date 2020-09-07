@@ -38,7 +38,7 @@ class ItemsViewControllerCell: UITableViewCell {
     
     // MARK: Configurations
     
-    func configureCell(profileImageURL: String?, title: String?, body: String?, tags: String?, likesCount: Int, commentsCount: Int) {
+  func configureCell(profileImageURL: String?, title: String?, body: String?, tags: String?, likesCount: Int, commentsCount: Int, url:String) {
         titleLabel.text = title
         bodyLabel.text = body
         tagsLabel.text = tags

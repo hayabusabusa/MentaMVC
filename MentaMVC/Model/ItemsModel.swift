@@ -9,8 +9,15 @@
 import Foundation
 import Alamofire
 
+protocol ItemsModelDelegate: AnyObject {
+    func getQiitaData(qiitaItems: [QiitaItems])
+}
+
 final class ItemsModel {
-    func onViewDidLoad() {
+    
+    weak var delegate: ItemsModelDelegate?
+    
+    func getQiitaData() {
         // ViewDidLoad でする処理
         let urlString = "https://qiita.com/api/v2/items?page=1&per_page=20"
         let url = URL(string: urlString)
@@ -22,9 +29,9 @@ final class ItemsModel {
                         guard let data = response.data else { return }
                         let qiitaItems = try JSONDecoder().decode([QiitaItems].self, from: data)
                         print(qiitaItems)
+                        self.delegate?.getQiitaData(qiitaItems: qiitaItems)
                     } catch {
                         // デコードのエラー
-                        print("---ここでエラー---")
                         print(error)
                     }
                 case .failure:
