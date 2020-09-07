@@ -17,15 +17,7 @@ final class ItemsViewController: UIViewController {
     
     // MARK: Properties
     
-    private var dataSource: [ItemsViewControllerCellType] = [
-        .item,
-        .item,
-        .item,
-        .item,
-        .item,
-        .item,
-        .indicator
-    ]
+    private var dataSource: [ItemsViewControllerCellType] = []
     
     // MARK: Lifecycle
     
@@ -33,19 +25,14 @@ final class ItemsViewController: UIViewController {
         super.viewDidLoad()
         configureNavigation()
         configureTableView()
-        itemsModel.onViewDidLoad()
         itemsModel.delegate = self
+        itemsModel.getQiitaData()
     }
 }
 
 extension ItemsViewController: ItemsModelDelegate {
-    func onViewDidLoad(with someData: Data) {
-        //modelで得たデータの処理
-        //すでにデコードされた記事データを取得してある → tableViewに映せばいいのでは？ → cellForlowAtに取得したデータを渡す → すでにcellForlowAtに記述されているデータどうするのか？
-      let a = Data()
-      print("=====") //そもそも呼ばれていない・・・
-      print(a)
-      print("=====")
+    func getQiitaData(with somedata: Data) {
+        print("=====ここチェック") //呼ばれていない なぜ？
     }
 }
 
@@ -81,17 +68,17 @@ extension ItemsViewController: UITableViewDataSource {
         let cellType = dataSource[indexPath.row]
         
         switch cellType {
-        case .item:
+        case .item(let item):
             let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerCell
             
             // TODO: Model オブジェクト作成後に修正する.
             cell.configureCell(
-                profileImageURL: "https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F202306%2Fprofile-images%2F1566547186?ixlib=rb-1.2.2&auto=compress%2Cformat&lossless=0&w=48&s=6949bc566d9b66c71fcddd7af98dda73",
-                title: "RxSwiftとRxCocoaを使ってストップウォッチを作る",
-                body: "去年からRxSwiftをしっかり使い始めて、ようやく慣れてきたので今回はRxSwiftとRxCocoaを使ってストップウォッチのようなタイマーを作ってみます。",
-                tags: ["iOS", "Swift", "RxSwift", "RxCocoa", "iOS", "Swift", "RxSwift", "RxCocoa"].reduce("") { $0 + "#\($1) " },
-                likesCount: 2,
-                commentsCount: 0)
+                profileImageURL: item.user.profileImageURL,
+                title: item.title,
+                body: item.body,
+                tags: item.tags.reduce("") { $0 + "#\($1.name) " },
+                likesCount: item.likesCount,
+                commentsCount: item.commentsCount)
             return cell
         case .indicator:
             let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerIndicatorCell

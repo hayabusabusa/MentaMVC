@@ -10,14 +10,14 @@ import Foundation
 import Alamofire
 
 protocol ItemsModelDelegate: AnyObject {
-    func onViewDidLoad(with someData: Data)
+    func getQiitaData(with somedata: Data)
 }
 
 final class ItemsModel {
     
     weak var delegate: ItemsModelDelegate?
     
-    func onViewDidLoad() {
+    func getQiitaData() {
         // ViewDidLoad でする処理
         let urlString = "https://qiita.com/api/v2/items?page=1&per_page=20"
         let url = URL(string: urlString)
@@ -29,6 +29,7 @@ final class ItemsModel {
                         guard let data = response.data else { return }
                         let qiitaItems = try JSONDecoder().decode([QiitaItems].self, from: data)
                         print(qiitaItems)
+                        print("===last call===")
                     } catch {
                         // デコードのエラー
                         print(error)
