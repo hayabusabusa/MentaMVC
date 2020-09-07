@@ -32,8 +32,9 @@ final class ItemsViewController: UIViewController {
 
 extension ItemsViewController: ItemsModelDelegate {
     func getQiitaData(qiitaItems: [QiitaItems]) {
-        //modelから[QiitaItems]型のデータを受け取った
-        print(qiitaItems)
+        let dataSource = qiitaItems.map { ItemsViewControllerCellType.item(with: $0) }
+        self.dataSource = dataSource
+        tableView.reloadData()
     }
 }
 
