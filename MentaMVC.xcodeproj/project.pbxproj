@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710A9577250615790084C06A /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A9576250615790084C06A /* Secrets.swift */; };
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		710A9576250615790084C06A /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A533F7F824F0B613005B98AC /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsViewController.storyboard; sourceTree = "<group>"; };
 		A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				A5F5DD4524F0B05B002F7F43 /* AppDelegate.swift */,
 				A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */,
+				710A9576250615790084C06A /* Secrets.swift */,
 				A533F82D24F17958005B98AC /* Model */,
 				A533F7F624F0B5D4005B98AC /* ViewController */,
 				A533F81624F0E9E2005B98AC /* Common */,
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A533F83824F17C0D005B98AC /* QiitaAPIClient.swift in Sources */,
+				710A9577250615790084C06A /* Secrets.swift in Sources */,
 				A533F81924F0EA17005B98AC /* ImageView.swift in Sources */,
 				A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */,
 				A533F82C24F16888005B98AC /* SafariViewController.swift in Sources */,
