@@ -31,8 +31,9 @@ final class ItemsViewController: UIViewController {
 }
 
 extension ItemsViewController: ItemsModelDelegate {
-    func getQiitaData(with somedata: Data) {
-        print("=====ここチェック") //呼ばれていない なぜ？
+    func getQiitaData(with: [QiitaItems]) {
+        //modelから[QiitaItems]型のデータを受け取った
+        print(with)
     }
 }
 
