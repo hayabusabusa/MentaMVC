@@ -18,6 +18,7 @@ final class ItemsViewController: UIViewController {
     // MARK: Properties
     
     private var dataSource: [ItemsViewControllerCellType] = []
+    private var urlArray: [String] = []
     
     // MARK: Lifecycle
     
@@ -80,7 +81,9 @@ extension ItemsViewController: UITableViewDataSource {
                 body: item.body,
                 tags: item.tags.reduce("") { $0 + "#\($1.name) " },
                 likesCount: item.likesCount,
-                commentsCount: item.commentsCount)
+                commentsCount: item.commentsCount,
+                url: item.url)
+                urlArray.append(item.url)
             return cell
         case .indicator:
             let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerIndicatorCell
@@ -97,7 +100,7 @@ extension ItemsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let url = URL(string: "https://qiita.com/hayabusabusa/items/54838ab2d7862b5a04dd") else { return }
+        guard let url = URL(string: urlArray[indexPath.row]) else { return }
         let vc = SafariViewController(url: url)
         present(vc, animated: true, completion: nil)
     }
