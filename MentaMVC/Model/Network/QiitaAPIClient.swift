@@ -27,7 +27,7 @@ final class QiitaAPIClient: QiitaAPIClientProtocol {
     
     func call<T: QiitaAPIRequest>(with request: T) -> Single<T.Response> {
         return Single.create { observer in
-            let url = request.baseURL + request.path
+            let url     = request.baseURL + request.path
             let request = AF.request(url,
                                      method: request.method,
                                      parameters: request.parameters,
