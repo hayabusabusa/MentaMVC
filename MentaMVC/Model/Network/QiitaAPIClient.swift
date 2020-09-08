@@ -7,8 +7,13 @@
 //
 
 import Alamofire
+import RxSwift
 
-final class QiitaAPIClient {
+protocol QiitaAPIClientProtocol {
+    func call<T: QiitaAPIRequest>(with request: T) -> Single<T.Response>
+}
+
+final class QiitaAPIClient: QiitaAPIClientProtocol {
     
     // MARK: Singleton
     
@@ -20,27 +25,32 @@ final class QiitaAPIClient {
     
     // MARK: API
     
-    func call<T: QiitaAPIRequest>(with request: T, completion: @escaping ((Result<T.Response, Error>) -> Void)) {
-        let url = request.baseURL + request.path
-        AF.request(url,
-                   method: request.method,
-                   parameters: request.parameters,
-                   encoding: request.encoding,
-                   headers: request.headers)
-            .validate(statusCode: 200 ..< 300)
-            .responseJSON { response in
-                switch response.result {
-                case .success:
-                    do {
-                        guard let data = response.data else { return }
-                        let entity = try JSONDecoder().decode(T.Response.self, from: data)
-                        completion(.success(entity))
-                    } catch {
-                        completion(.failure(error))
+    func call<T: QiitaAPIRequest>(with request: T) -> Single<T.Response> {
+        return Single.create { observer in
+            let url = request.baseURL + request.path
+            let request = AF.request(url,
+                                     method: request.method,
+                                     parameters: request.parameters,
+                                     encoding: request.encoding,
+                                     headers: request.headers)
+                .validate(statusCode: 200 ..< 300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success:
+                        do {
+                            guard let data = response.data else { return }
+                            let entity = try JSONDecoder().decode(T.Response.self, from: data)
+                            observer(.success(entity))
+                        } catch {
+                            observer(.error(error))
+                        }
+                    case .failure(let error):
+                        observer(.error(error))
                     }
-                case .failure(let error):
-                    completion(.failure(error))
-                }
+            }
+            return Disposables.create {
+                request.cancel()
+            }
         }
     }
 }
