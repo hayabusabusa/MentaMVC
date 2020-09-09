@@ -38,8 +38,10 @@ final class ItemsViewModel: ItemsViewModelInput, ItemsViewModelOutput {
     
     init(model: ItemsModelProtocol = ItemsModel()) {
         self.model = model
-        self.dataSourceDriver = model.qiitaItemsRelay
-            .map { $0.map { ItemsViewControllerCellType.item(with: $0) } }
+        self.dataSourceDriver = Observable.zip(model.qiitaItemsRelay, model.isReachLastPageRelay)
+            .map { qiitaItems, isReachLastPage in
+                return qiitaItems.map { ItemsViewControllerCellType.item(with: $0) } + (isReachLastPage ? [] : [.indicator])
+            }
             .asDriver(onErrorDriveWith: .empty())
         self.isLoadingSignal = model.isLoadingRelay.asSignal()
     }
