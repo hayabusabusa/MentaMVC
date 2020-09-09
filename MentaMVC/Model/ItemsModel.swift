@@ -10,12 +10,12 @@ import RxSwift
 import RxRelay
 
 protocol ItemsModelProtocol {
-    var qiitaItems: Observable<[QiitaItem]> { get }
-    var isLoading: Observable<Bool> { get }
+    var qiitaItemsRelay: BehaviorRelay<[QiitaItem]> { get }
+    var isLoadingRelay: PublishRelay<Bool> { get }
     func fetchItems()
 }
 
-final class ItemsModel {
+final class ItemsModel: ItemsModelProtocol {
     
     // MARK: Dependency
     
@@ -23,8 +23,9 @@ final class ItemsModel {
     
     // MARK: Properties
     
-    private let qiitaItemsRelay = BehaviorRelay<[QiitaItem]>(value: [])
-    private let isLoadingRelay = PublishRelay<Bool>()
+    var qiitaItemsRelay = BehaviorRelay<[QiitaItem]>(value: [])
+    var isLoadingRelay = PublishRelay<Bool>()
+    
     private let errorRelay = PublishRelay<Error>()
     private let disposeBag = DisposeBag()
     
@@ -34,17 +35,6 @@ final class ItemsModel {
     
     init(apiClient: QiitaAPIClientProtocol = QiitaAPIClient.shared) {
         self.apiClient = apiClient
-    }
-}
-
-extension ItemsModel: ItemsModelProtocol {
-    
-    var qiitaItems: Observable<[QiitaItem]> {
-        return qiitaItemsRelay.asObservable()
-    }
-    
-    var isLoading: Observable<Bool> {
-        return isLoadingRelay.asObservable()
     }
     
     func fetchItems() {
