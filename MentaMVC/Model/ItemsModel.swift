@@ -13,7 +13,9 @@ protocol ItemsModelProtocol {
     var qiitaItemsRelay: BehaviorRelay<[QiitaItem]> { get }
     var isReachLastPageRelay: BehaviorRelay<Bool> { get }
     var isLoadingRelay: PublishRelay<Bool> { get }
+    
     func fetchItems()
+    func fetchNextPageItems()
 }
 
 final class ItemsModel: ItemsModelProtocol {
@@ -65,10 +67,12 @@ final class ItemsModel: ItemsModelProtocol {
         apiClient.call(with: QiitaItemsPaginationRequest(page: nextPage))
             .subscribe(onSuccess: { [weak self] response in
                 self?.currentPage = nextPage
+                self?.isLoadingNextPage = false
                 self?.isReachLastPageRelay.accept(response.totalCount <= nextPage)
-                self?.qiitaItemsRelay.accept(response.items)
-            }, onError: { error in
-                
+                self?.qiitaItemsRelay.accept((self?.qiitaItemsRelay.value ?? []) + response.items)
+            }, onError: { [weak self] error in
+                self?.isLoadingNextPage = false
+                self?.errorRelay.accept(error)
             })
             .disposed(by: disposeBag)
     }

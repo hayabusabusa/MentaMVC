@@ -15,6 +15,7 @@
 		710A95852508A3910084C06A /* QiitaAPIComplexRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95842508A3910084C06A /* QiitaAPIComplexRequest.swift */; };
 		710A95872508A4850084C06A /* QiitaItemsPaginationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95862508A4850084C06A /* QiitaItemsPaginationRequest.swift */; };
 		710A95892508A4B20084C06A /* QiitaItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95882508A4B20084C06A /* QiitaItemsResponse.swift */; };
+		710A958C2508B5C00084C06A /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A958B2508B5C00084C06A /* UIScrollView+Rx.swift */; };
 		71B535192502069C007F02EF /* QiitaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B535182502069C007F02EF /* QiitaItem.swift */; };
 		71B5351B250206B2007F02EF /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351A250206B2007F02EF /* QiitaItemTag.swift */; };
 		71B5351D250206CE007F02EF /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351C250206CE007F02EF /* QiitaUser.swift */; };
@@ -78,6 +79,7 @@
 		710A95842508A3910084C06A /* QiitaAPIComplexRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIComplexRequest.swift; sourceTree = "<group>"; };
 		710A95862508A4850084C06A /* QiitaItemsPaginationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsPaginationRequest.swift; sourceTree = "<group>"; };
 		710A95882508A4B20084C06A /* QiitaItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsResponse.swift; sourceTree = "<group>"; };
+		710A958B2508B5C00084C06A /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
 		71B535182502069C007F02EF /* QiitaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItem.swift; sourceTree = "<group>"; };
 		71B5351A250206B2007F02EF /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
 		71B5351C250206CE007F02EF /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		710A958A2508B5AB0084C06A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				710A958B2508B5C00084C06A /* UIScrollView+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		71B535152502043A007F02EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +223,7 @@
 		A533F81624F0E9E2005B98AC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				710A958A2508B5AB0084C06A /* Extension */,
 				A533F81724F0E9E9005B98AC /* View */,
 			);
 			path = Common;
@@ -423,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A533F81924F0EA17005B98AC /* ImageView.swift in Sources */,
+				710A958C2508B5C00084C06A /* UIScrollView+Rx.swift in Sources */,
 				71B535192502069C007F02EF /* QiitaItem.swift in Sources */,
 				A55D6BFA24F24AC4000B2ED4 /* Secrets.swift in Sources */,
 				A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */,

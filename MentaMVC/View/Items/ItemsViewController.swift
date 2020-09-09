@@ -60,6 +60,12 @@ extension ItemsViewController {
         let viewModel = ItemsViewModel()
         self.viewModel = viewModel
         
+        tableView.rx.reachedBottom.asSignal()
+            .emit(onNext: {
+                viewModel.reachedBottom()
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.output.dataSourceDriver
             .drive(tableView.rx.items) { tableView, row, element in
                 switch element {

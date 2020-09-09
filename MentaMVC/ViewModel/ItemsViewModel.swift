@@ -11,6 +11,7 @@ import RxCocoa
 
 protocol ItemsViewModelInput {
     func viewDidLoad()
+    func reachedBottom()
 }
 
 protocol ItemsViewModelOutput {
@@ -50,6 +51,10 @@ final class ItemsViewModel: ItemsViewModelInput, ItemsViewModelOutput {
     
     func viewDidLoad() {
         model.fetchItems()
+    }
+    
+    func reachedBottom() {
+        model.fetchNextPageItems()
     }
 }
 
