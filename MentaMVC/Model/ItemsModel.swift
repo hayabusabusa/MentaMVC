@@ -29,7 +29,7 @@ final class ItemsModel: ItemsModelProtocol {
     private let errorRelay = PublishRelay<Error>()
     private let disposeBag = DisposeBag()
     
-    private var currentPage: Int = 0
+    private var currentPage: Int = 1
     
     // MARK: Initializer
     

@@ -14,8 +14,8 @@ protocol ItemsViewModelInput {
 }
 
 protocol ItemsViewModelOutput {
-    var qiitaItemsRelay: BehaviorRelay<[QiitaItem]> { get }
-    var isLoadingRelay: PublishRelay<Bool> { get }
+    var dataSourceDriver: Driver<[ItemsViewControllerCellType]> { get }
+    var isLoadingSignal: Signal<Bool> { get }
 }
 
 protocol ItemsViewModelType {
@@ -31,15 +31,17 @@ final class ItemsViewModel: ItemsViewModelInput, ItemsViewModelOutput {
     
     // MARK: Properties
     
-    var qiitaItemsRelay: BehaviorRelay<[QiitaItem]>
-    var isLoadingRelay: PublishRelay<Bool>
+    var dataSourceDriver: Driver<[ItemsViewControllerCellType]>
+    var isLoadingSignal: Signal<Bool>
     
     // MARK: Initializer
     
     init(model: ItemsModelProtocol = ItemsModel()) {
         self.model = model
-        self.qiitaItemsRelay = model.qiitaItemsRelay
-        self.isLoadingRelay = model.isLoadingRelay
+        self.dataSourceDriver = model.qiitaItemsRelay
+            .map { $0.map { ItemsViewControllerCellType.item(with: $0) } }
+            .asDriver(onErrorDriveWith: .empty())
+        self.isLoadingSignal = model.isLoadingRelay.asSignal()
     }
     
     // MARK: Input

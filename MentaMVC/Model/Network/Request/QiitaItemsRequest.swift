@@ -12,6 +12,7 @@ struct QiitaItemsRequest: QiitaAPIRequest {
     typealias Response = [QiitaItem]
     
     let page: Int
+    let perPage: Int = 20
     
     var path: String {
         return "/items"
@@ -23,7 +24,8 @@ struct QiitaItemsRequest: QiitaAPIRequest {
     
     var parameters: Parameters? {
         return [
-            "page": page
+            "page": page,
+            "per_page": perPage
         ]
     }
     

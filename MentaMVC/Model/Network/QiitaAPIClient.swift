@@ -33,7 +33,6 @@ final class QiitaAPIClient: QiitaAPIClientProtocol {
                                      parameters: request.parameters,
                                      encoding: request.encoding,
                                      headers: request.headers)
-                .validate(statusCode: 200 ..< 300)
                 .responseJSON { response in
                     switch response.result {
                     case .success:
