@@ -65,6 +65,21 @@ extension ItemsViewController {
                 viewModel.reachedBottom()
             })
             .disposed(by: disposeBag)
+        tableView.rx.modelSelected(ItemsViewControllerCellType.self).asSignal()
+            .emit(onNext: { [weak self] cellType in
+                // TODO: Use coordinator or wirefame pattern.
+                switch cellType {
+                case .item(let item):
+                    guard let url = URL(string: item.url ?? "") else {
+                        return
+                    }
+                    let vc = SafariViewController(url: url)
+                    self?.present(vc, animated: true, completion: nil)
+                default:
+                    return
+                }
+            })
+            .disposed(by: disposeBag)
         
         viewModel.output.dataSourceDriver
             .drive(tableView.rx.items) { tableView, row, element in
