@@ -9,6 +9,7 @@
 import Foundation
 
 struct QiitaItem: Decodable {
+    let id: String
     let title: String?
     let body: String?
     let url: String?
@@ -18,6 +19,7 @@ struct QiitaItem: Decodable {
     let tags: [QiitaItemTag]
     
     private enum CodingKeys: String, CodingKey {
+        case id
         case title
         case body
         case url

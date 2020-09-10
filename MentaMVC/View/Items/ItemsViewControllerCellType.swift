@@ -8,7 +8,18 @@
 
 import Foundation
 
-enum ItemsViewControllerCellType {
+enum ItemsViewControllerCellType: Equatable {
     case item(with: QiitaItem)
     case indicator
+    
+    static func == (lhs: ItemsViewControllerCellType, rhs: ItemsViewControllerCellType) -> Bool {
+        switch (lhs, rhs) {
+        case let (.item(l), item(r)):
+            return l.id == r.id
+        case (.indicator, .indicator):
+            return true
+        default:
+            return false
+        }
+    }
 }
