@@ -33,11 +33,8 @@
 		71B5351B250206B2007F02EF /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351A250206B2007F02EF /* QiitaItemTag.swift */; };
 		71B5351D250206CE007F02EF /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351C250206CE007F02EF /* QiitaUser.swift */; };
 		71B5352125021CE2007F02EF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5351E25021CE2007F02EF /* RxSwift.framework */; };
-		71B5352225021CE2007F02EF /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5351E25021CE2007F02EF /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71B5352325021CE2007F02EF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5351F25021CE2007F02EF /* RxCocoa.framework */; };
-		71B5352425021CE2007F02EF /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5351F25021CE2007F02EF /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71B5352525021CE2007F02EF /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5352025021CE2007F02EF /* RxRelay.framework */; };
-		71B5352625021CE2007F02EF /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5352025021CE2007F02EF /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A533F7F924F0B613005B98AC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F7F824F0B613005B98AC /* ItemsViewController.swift */; };
 		A533F7FB24F0B631005B98AC /* ItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533F7FA24F0B631005B98AC /* ItemsViewController.storyboard */; };
 		A533F81424F0E87A005B98AC /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533F81224F0E87A005B98AC /* ItemsViewControllerCell.swift */; };
@@ -78,19 +75,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71B5352725021CE2007F02EF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				71B5352425021CE2007F02EF /* RxCocoa.framework in Embed Frameworks */,
-				71B5352225021CE2007F02EF /* RxSwift.framework in Embed Frameworks */,
-				71B5352625021CE2007F02EF /* RxRelay.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -110,8 +94,8 @@
 		710A959D2509F6B50084C06A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		710A959F2509F6C20084C06A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		710A95AA250A00090084C06A /* ItemsModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModelMock.swift; sourceTree = "<group>"; };
-		710A95AE250A0E1D0084C06A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
-		710A95B0250A0E3E0084C06A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		710A95AE250A0E1D0084C06A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTest.framework; sourceTree = "<group>"; };
+		710A95B0250A0E3E0084C06A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
 		71B535182502069C007F02EF /* QiitaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItem.swift; sourceTree = "<group>"; };
 		71B5351A250206B2007F02EF /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
 		71B5351C250206CE007F02EF /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
@@ -310,7 +294,9 @@
 		A533F81C24F0F59E005B98AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				710A95B0250A0E3E0084C06A /* RxBlocking.framework */,
 				710A959F2509F6C20084C06A /* RxTest.framework */,
+				710A95AE250A0E1D0084C06A /* RxTest.framework */,
 				710A959D2509F6B50084C06A /* RxBlocking.framework */,
 				71B5351F25021CE2007F02EF /* RxCocoa.framework */,
 				71B5352025021CE2007F02EF /* RxRelay.framework */,
@@ -332,8 +318,6 @@
 		A5F5DD3924F0B05B002F7F43 = {
 			isa = PBXGroup;
 			children = (
-				710A95B0250A0E3E0084C06A /* RxBlocking.framework */,
-				710A95AE250A0E1D0084C06A /* RxTest.framework */,
 				A5F5DD4424F0B05B002F7F43 /* MentaMVC */,
 				A5F5DD5B24F0B05C002F7F43 /* MentaMVCTests */,
 				A5F5DD4324F0B05B002F7F43 /* Products */,
@@ -390,7 +374,6 @@
 				A5F5DD3F24F0B05B002F7F43 /* Frameworks */,
 				A5F5DD4024F0B05B002F7F43 /* Resources */,
 				A533F81B24F0F580005B98AC /* Carthage */,
-				71B5352725021CE2007F02EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
