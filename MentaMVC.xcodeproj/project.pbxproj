@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710912D2250A1E3400C6097E /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710912D1250A1E3400C6097E /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		710912D4250A1E5600C6097E /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710912D3250A1E5600C6097E /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		710A957A25072DE70084C06A /* QiitaAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A957925072DE70084C06A /* QiitaAPIRequest.swift */; };
 		710A957C25072F990084C06A /* QiitaItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A957B25072F990084C06A /* QiitaItemsRequest.swift */; };
 		710A957E2507393A0084C06A /* QiitaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A957D2507393A0084C06A /* QiitaAPIClient.swift */; };
@@ -27,8 +29,6 @@
 		710A95A32509FB210084C06A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A533F81E24F0F59E005B98AC /* Alamofire.framework */; platformFilter = ios; };
 		710A95AB250A00090084C06A /* ItemsModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95AA250A00090084C06A /* ItemsModelMock.swift */; };
 		710A95AC250A0A1B0084C06A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5351F25021CE2007F02EF /* RxCocoa.framework */; platformFilter = ios; };
-		710A95AF250A0E1D0084C06A /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710A95AE250A0E1D0084C06A /* RxTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		710A95B1250A0E3E0084C06A /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710A95B0250A0E3E0084C06A /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71B535192502069C007F02EF /* QiitaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B535182502069C007F02EF /* QiitaItem.swift */; };
 		71B5351B250206B2007F02EF /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351A250206B2007F02EF /* QiitaItemTag.swift */; };
 		71B5351D250206CE007F02EF /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351C250206CE007F02EF /* QiitaUser.swift */; };
@@ -70,14 +70,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				710A95B1250A0E3E0084C06A /* RxBlocking.framework in CopyFiles */,
-				710A95AF250A0E1D0084C06A /* RxTest.framework in CopyFiles */,
+				710912D4250A1E5600C6097E /* RxTest.framework in CopyFiles */,
+				710912D2250A1E3400C6097E /* RxBlocking.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		710912D1250A1E3400C6097E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		710912D3250A1E5600C6097E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		710A957925072DE70084C06A /* QiitaAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIRequest.swift; sourceTree = "<group>"; };
 		710A957B25072F990084C06A /* QiitaItemsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsRequest.swift; sourceTree = "<group>"; };
 		710A957D2507393A0084C06A /* QiitaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIClient.swift; sourceTree = "<group>"; };
@@ -94,8 +96,6 @@
 		710A959D2509F6B50084C06A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		710A959F2509F6C20084C06A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		710A95AA250A00090084C06A /* ItemsModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModelMock.swift; sourceTree = "<group>"; };
-		710A95AE250A0E1D0084C06A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTest.framework; sourceTree = "<group>"; };
-		710A95B0250A0E3E0084C06A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
 		71B535182502069C007F02EF /* QiitaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItem.swift; sourceTree = "<group>"; };
 		71B5351A250206B2007F02EF /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
 		71B5351C250206CE007F02EF /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
@@ -294,9 +294,7 @@
 		A533F81C24F0F59E005B98AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				710A95B0250A0E3E0084C06A /* RxBlocking.framework */,
 				710A959F2509F6C20084C06A /* RxTest.framework */,
-				710A95AE250A0E1D0084C06A /* RxTest.framework */,
 				710A959D2509F6B50084C06A /* RxBlocking.framework */,
 				71B5351F25021CE2007F02EF /* RxCocoa.framework */,
 				71B5352025021CE2007F02EF /* RxRelay.framework */,
@@ -318,6 +316,8 @@
 		A5F5DD3924F0B05B002F7F43 = {
 			isa = PBXGroup;
 			children = (
+				710912D3250A1E5600C6097E /* RxTest.framework */,
+				710912D1250A1E3400C6097E /* RxBlocking.framework */,
 				A5F5DD4424F0B05B002F7F43 /* MentaMVC */,
 				A5F5DD5B24F0B05C002F7F43 /* MentaMVCTests */,
 				A5F5DD4324F0B05B002F7F43 /* Products */,
