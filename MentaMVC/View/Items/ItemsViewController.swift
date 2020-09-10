@@ -39,6 +39,9 @@ final class ItemsViewController: UIViewController {
 extension ItemsViewController {
     
     private func configureNavigation() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.searchTextField.placeholder = "キーワードで検索"
+        navigationItem.searchController = searchController
         navigationItem.title = "記事一覧"
     }
     
@@ -63,6 +66,11 @@ extension ItemsViewController {
         tableView.rx.reachedBottom.asSignal()
             .emit(onNext: {
                 viewModel.reachedBottom()
+            })
+            .disposed(by: disposeBag)
+        tableView.rx.itemSelected.asSignal()
+            .emit(onNext: { [weak self] indexPath in
+                self?.tableView.deselectRow(at: indexPath, animated: true)
             })
             .disposed(by: disposeBag)
         tableView.rx.modelSelected(ItemsViewControllerCellType.self).asSignal()
