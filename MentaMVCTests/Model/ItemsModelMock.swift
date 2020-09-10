@@ -29,12 +29,14 @@ class ItemsModelMock: ItemsModelProtocol {
     // MARK: Output
     
     func fetchItems() {
+        isReachLastPageRelay.accept(false)
         qiitaItemsRelay.accept([
-            QiitaItem(id: "TEST", title: "TEST", body: "TEST", url: "https://qiita.com/", likesCount: 0, commentsCount: 0, user: QiitaUser(profileImageURL: "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/202306/profile-images/1566547186"), tags: [QiitaItemTag(name: "TEST")])
+            Mock.createQiitaItem(with: 1)
         ])
     }
     
     func fetchNextPageItems() {
-        
+        isReachLastPageRelay.accept(true)
+        qiitaItemsRelay.accept(qiitaItemsRelay.value + [Mock.createQiitaItem(with: qiitaItemsRelay.value.count + 1)])
     }
 }

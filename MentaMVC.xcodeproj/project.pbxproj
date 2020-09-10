@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		710912D2250A1E3400C6097E /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710912D1250A1E3400C6097E /* RxBlocking.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		710912D4250A1E5600C6097E /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 710912D3250A1E5600C6097E /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		710912D6250A212F00C6097E /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710912D5250A212F00C6097E /* Mock.swift */; };
 		710A957A25072DE70084C06A /* QiitaAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A957925072DE70084C06A /* QiitaAPIRequest.swift */; };
 		710A957C25072F990084C06A /* QiitaItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A957B25072F990084C06A /* QiitaItemsRequest.swift */; };
 		710A957E2507393A0084C06A /* QiitaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A957D2507393A0084C06A /* QiitaAPIClient.swift */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		710912D1250A1E3400C6097E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		710912D3250A1E5600C6097E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		710912D5250A212F00C6097E /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		710A957925072DE70084C06A /* QiitaAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIRequest.swift; sourceTree = "<group>"; };
 		710A957B25072F990084C06A /* QiitaItemsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsRequest.swift; sourceTree = "<group>"; };
 		710A957D2507393A0084C06A /* QiitaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIClient.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		710A95922509D8730084C06A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				710912D5250A212F00C6097E /* Mock.swift */,
 				710A95932509D8950084C06A /* XCTestCase+Extension.swift */,
 			);
 			path = Common;
@@ -200,17 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				710A95AA250A00090084C06A /* ItemsModelMock.swift */,
-				710A958D2509D2430084C06A /* QiitaAPIResponseTests.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		710A95982509F3CE0084C06A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				710A95952509EEA10084C06A /* ItemsViewModelTests.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		71B535152502043A007F02EF /* Model */ = {
@@ -354,8 +348,9 @@
 		A5F5DD5B24F0B05C002F7F43 /* MentaMVCTests */ = {
 			isa = PBXGroup;
 			children = (
+				710A958D2509D2430084C06A /* QiitaAPIResponseTests.swift */,
+				710A95952509EEA10084C06A /* ItemsViewModelTests.swift */,
 				710A95972509F3BE0084C06A /* Model */,
-				710A95982509F3CE0084C06A /* ViewModel */,
 				710A95922509D8730084C06A /* Common */,
 				710A958F2509D2630084C06A /* Resource */,
 				A5F5DD5E24F0B05C002F7F43 /* Info.plist */,
@@ -524,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				710A95AB250A00090084C06A /* ItemsModelMock.swift in Sources */,
+				710912D6250A212F00C6097E /* Mock.swift in Sources */,
 				710A95942509D8950084C06A /* XCTestCase+Extension.swift in Sources */,
 				710A95962509EEA10084C06A /* ItemsViewModelTests.swift in Sources */,
 				710A958E2509D2430084C06A /* QiitaAPIResponseTests.swift in Sources */,
