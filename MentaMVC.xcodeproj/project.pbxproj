@@ -16,6 +16,9 @@
 		710A95872508A4850084C06A /* QiitaItemsPaginationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95862508A4850084C06A /* QiitaItemsPaginationRequest.swift */; };
 		710A95892508A4B20084C06A /* QiitaItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95882508A4B20084C06A /* QiitaItemsResponse.swift */; };
 		710A958C2508B5C00084C06A /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A958B2508B5C00084C06A /* UIScrollView+Rx.swift */; };
+		710A958E2509D2430084C06A /* QiitaAPIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A958D2509D2430084C06A /* QiitaAPIResponseTests.swift */; };
+		710A95912509D3CE0084C06A /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 710A95902509D3CE0084C06A /* response.json */; };
+		710A95942509D8950084C06A /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A95932509D8950084C06A /* XCTestCase+Extension.swift */; };
 		71B535192502069C007F02EF /* QiitaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B535182502069C007F02EF /* QiitaItem.swift */; };
 		71B5351B250206B2007F02EF /* QiitaItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351A250206B2007F02EF /* QiitaItemTag.swift */; };
 		71B5351D250206CE007F02EF /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5351C250206CE007F02EF /* QiitaUser.swift */; };
@@ -41,7 +44,6 @@
 		A5F5DD4824F0B05B002F7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD4724F0B05B002F7F43 /* SceneDelegate.swift */; };
 		A5F5DD4F24F0B05C002F7F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F5DD4E24F0B05C002F7F43 /* Assets.xcassets */; };
 		A5F5DD5224F0B05C002F7F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F5DD5024F0B05C002F7F43 /* LaunchScreen.storyboard */; };
-		A5F5DD5D24F0B05C002F7F43 /* MentaMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5DD5C24F0B05C002F7F43 /* MentaMVCTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,9 @@
 		710A95862508A4850084C06A /* QiitaItemsPaginationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsPaginationRequest.swift; sourceTree = "<group>"; };
 		710A95882508A4B20084C06A /* QiitaItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsResponse.swift; sourceTree = "<group>"; };
 		710A958B2508B5C00084C06A /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
+		710A958D2509D2430084C06A /* QiitaAPIResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIResponseTests.swift; sourceTree = "<group>"; };
+		710A95902509D3CE0084C06A /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
+		710A95932509D8950084C06A /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		71B535182502069C007F02EF /* QiitaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItem.swift; sourceTree = "<group>"; };
 		71B5351A250206B2007F02EF /* QiitaItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemTag.swift; sourceTree = "<group>"; };
 		71B5351C250206CE007F02EF /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
@@ -105,7 +110,6 @@
 		A5F5DD5124F0B05C002F7F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5F5DD5324F0B05C002F7F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F5DD5824F0B05C002F7F43 /* MentaMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentaMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5F5DD5C24F0B05C002F7F43 /* MentaMVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentaMVCTests.swift; sourceTree = "<group>"; };
 		A5F5DD5E24F0B05C002F7F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,22 @@
 				710A958B2508B5C00084C06A /* UIScrollView+Rx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		710A958F2509D2630084C06A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				710A95902509D3CE0084C06A /* response.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		710A95922509D8730084C06A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				710A95932509D8950084C06A /* XCTestCase+Extension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		71B535152502043A007F02EF /* Model */ = {
@@ -296,7 +316,9 @@
 		A5F5DD5B24F0B05C002F7F43 /* MentaMVCTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5F5DD5C24F0B05C002F7F43 /* MentaMVCTests.swift */,
+				710A958D2509D2430084C06A /* QiitaAPIResponseTests.swift */,
+				710A95922509D8730084C06A /* Common */,
+				710A958F2509D2630084C06A /* Resource */,
 				A5F5DD5E24F0B05C002F7F43 /* Info.plist */,
 			);
 			path = MentaMVCTests;
@@ -397,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710A95912509D3CE0084C06A /* response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +484,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F5DD5D24F0B05C002F7F43 /* MentaMVCTests.swift in Sources */,
+				710A95942509D8950084C06A /* XCTestCase+Extension.swift in Sources */,
+				710A958E2509D2430084C06A /* QiitaAPIResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
